@@ -27,8 +27,20 @@
 .sidebar--container .links .link {
     height: 40px;
     display: flex;
+    margin: 10px 0;
     align-items: center;
     color: #fff;
+    padding: 0 20px;
+}
+
+.sidebar--container .links .link:hover {
+    background-color: rgba(0, 0, 0, 0.726);
+    border-radius: 10px;
+}
+
+.sidebar--container .links .active {
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
 }
 
 

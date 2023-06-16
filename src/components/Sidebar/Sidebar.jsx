@@ -12,7 +12,7 @@ const Sidebar = () => {
                 <HiMenu size={40} style={{ color: 'white', fontWeight:'bold' }} />
             </div>
             <div className="links">
-                <div className="link">
+                <div className="link active">
                     <HiHome size={20}/>
                     <p>Dashboard</p>
                 </div>
