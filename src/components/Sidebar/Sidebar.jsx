@@ -1,27 +1,26 @@
 import './Sidebar.css'
 import logo from '../../assets/LOGO.png'
-import { FaUser } from 'react-icons/fa'
+import { FaBasketballBall, FaHome, FaList, FaPeopleArrows } from 'react-icons/fa'
+
 const Sidebar = () => {
     return (
         <div className="sidebar--container">
             <div className="header">
                 <img src={logo} alt="Logo Image" />
-                <FaUser size={32} />
-                
+                <FaList size={32} style={{ color: 'white' }} />
+
             </div>
             <div className="links">
                 <div className="link">
-                <FaUser />
-
+                    <FaHome />
                     <p>Dashboard</p>
                 </div>
                 <div className="link">
-                <FaUser />
-
+                    <FaPeopleArrows />
                     <p>Owners</p>
                 </div>
                 <div className="link">
-                    <FaUser />
+                    <FaBasketballBall />
                     <p>Settings</p>
                 </div>
             </div>
