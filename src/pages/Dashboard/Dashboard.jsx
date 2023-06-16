@@ -1,11 +1,10 @@
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { FaHome } from "react-icons/fa";
 import profile from "../../assets/profile.png"
-import Content from "../../components/Content/Content";
-
+import { Outlet } from "react-router";
 import '../../assets/styles/dashboard.css'
 
-const Dashboard = () => {
+const Dashboard = ({children}) => {
     return (
         <div className="dashboard--container">
             <Sidebar />
@@ -17,7 +16,9 @@ const Dashboard = () => {
                     </div>
                     <img src={profile} alt="Profile Image" />
                 </div>
-                <Content />
+                <div className="content--changing">
+                    <Outlet />
+                </div>
             </div>
         </div>
     )

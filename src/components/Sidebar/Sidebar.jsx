@@ -1,9 +1,9 @@
 import './Sidebar.css'
 import logo from '../../assets/LOGO.png'
-import { FaBasketballBall, FaHome, FaList, FaPeopleArrows } from 'react-icons/fa'
 import {HiHome,HiMenu} from 'react-icons/hi'
 import {BsFillPeopleFill} from 'react-icons/bs'
 import {IoMdSettings} from 'react-icons/io'
+import { Link } from 'react-router-dom'
 const Sidebar = () => {
     return (
         <div className="sidebar--container">
@@ -14,15 +14,15 @@ const Sidebar = () => {
             <div className="links">
                 <div className="link active">
                     <HiHome size={20}/>
-                    <p>Dashboard</p>
+                    <Link to='/dashboard/content' className="dashboard-link"><p>Dashboard</p></Link>
                 </div>
                 <div className="link">
                     <BsFillPeopleFill size={20} />
-                    <p>Owners</p>
+                    <Link to='/dashboard/owners' className="dashboard-link"><p>Owners</p></Link>
                 </div>
                 <div className="link">
                     <IoMdSettings size={20} />
-                    <p>Settings</p>
+                    <Link to='/dashboard/settings' className="dashboard-link"><p>Settings</p></Link>
                 </div>
             </div>
         </div>

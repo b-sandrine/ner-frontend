@@ -25,3 +25,10 @@
 .content--header img {
     float: right;
 }
+
+.content--changing {
+    position: absolute;
+    top: 80px;
+    width: 90%;
+    height: 90vh;
+}

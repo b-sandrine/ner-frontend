@@ -38,14 +38,19 @@
     border-radius: 10px;
 }
 
-.sidebar--container .links .active {
+/* .sidebar--container .links .active {
     background-color: rgba(0, 0, 0, 0.61);
     border-radius: 10px;
-}
+} */
 
 
 .sidebar--container .links .link p {
     margin-left: 30px;
     font-size: 18px;
     font-weight: 500;
+}
+
+.sidebar--container .links .link .dashboard-link {
+    text-decoration: none;
+    color: #fff;
 }
