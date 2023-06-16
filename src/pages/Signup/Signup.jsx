@@ -28,7 +28,7 @@ const Signup = () => {
                     <input type="text" name="" id="" placeholder='Address'/>
                     <input type="text" name="" id="" placeholder='Username'/>
                     <input type="password" name="" id="" placeholder='Password' />
-                    <input type="submit" name="" id="" value="Sign Up " />
+                    <input type="submit" name="" id="" value="Sign Up " onClick={handleNavigate}/>
                 </div>
                 <div className="footer-text">
                     <p>OR</p>

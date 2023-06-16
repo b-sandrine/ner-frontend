@@ -7,6 +7,9 @@ const Login = () => {
     function handleNavigate () {
         navigate('/register')
     }
+    function handleNavigateDashboard() {
+        navigate('/dashboard');
+    }
     return (
         <div className="container">
             <div className="static">
@@ -23,7 +26,7 @@ const Login = () => {
                 <div className="form">
                     <input type="text" name="" id="" placeholder='Email' />
                     <input type="password" name="" id="" placeholder='Password' />
-                    <input type="submit" name="" id="" value="LOG IN " />
+                    <input type="submit" name="" id="" value="LOG IN " onClick={handleNavigateDashboard}/>
                 </div>
                 <div className="footer-text">
                     <p>OR</p>
