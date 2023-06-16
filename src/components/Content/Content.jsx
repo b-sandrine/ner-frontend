@@ -2,9 +2,19 @@ import { useEffect, useState } from 'react'
 import './Content.css'
 import $ from 'jquery'
 import axios from 'axios';
+import Adduser from '../../modals/AddUser';
 
 const Content = () => {
     const [data, setData] = useState([]);
+    const [isOpen,setIsOpen] = useState(false)
+
+    function openModal () {
+        setIsOpen(true)
+    }
+
+    function closeModal () {
+        setIsOpen(false)
+    }
 
     useEffect(() => {
         axios.get("http://localhost:8080/api/users")
@@ -38,7 +48,8 @@ const Content = () => {
         <div className="content--container">
             <div className="header">
                 <p>Users</p>
-                <button>Add New User</button>
+                <button onClick={openModal}>Add New User</button>
+                {isOpen ? <Adduser onClose={closeModal}/> : null}
             </div>
             <div className="table">
                 <table id="myTable">
