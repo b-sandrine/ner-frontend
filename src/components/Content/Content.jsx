@@ -49,7 +49,10 @@ const Content = () => {
             <div className="header">
                 <p>Users</p>
                 <button onClick={openModal}>Add New User</button>
-                {isOpen ? <Adduser onClose={closeModal}/> : null}
+                {isOpen ? 
+                <div className="modal--overlay">
+                    <Adduser onClose={closeModal}/>
+                </div> : null}
             </div>
             <div className="table">
                 <table id="myTable">
