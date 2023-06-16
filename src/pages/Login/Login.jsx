@@ -2,13 +2,26 @@ import '../../assets/styles/main.css'
 import welcome from '../../assets/welcome.png';
 import logo from '../../assets/LOGO.png'
 import { useNavigate } from 'react-router';
+import { useState } from 'react';
 const Login = () => {
     const navigate = useNavigate();
-    function handleNavigate () {
-        navigate('/register')
+    const [user, setUser] = useState({
+        email: "",
+        password: ""
+    })
+
+    function handleChange(e) {
+        e.preventDefault()
+
+        setUser({...user, [e.target.name]: e.target.value})
     }
-    function handleNavigateDashboard() {
-        navigate('/dashboard');
+    function handleNavigate() {
+        if(user) {
+            navigate('/dashboard');
+        }
+        else{
+            navigate('/register')
+        }
     }
     return (
         <div className="container">
@@ -24,9 +37,9 @@ const Login = () => {
             <div className="content">
                 <img src={logo} alt="Logo" />
                 <div className="form">
-                    <input type="text" name="" id="" placeholder='Email' />
-                    <input type="password" name="" id="" placeholder='Password' />
-                    <input type="submit" name="" id="" value="LOG IN " onClick={handleNavigateDashboard}/>
+                    <input type="email" name="email" id="" placeholder='Email' value={user.email} onChange={handleChange}/>
+                    <input type="password" name="password" id="" placeholder='Password' value={user.password} onChange={handleChange}/>
+                    <input type="submit" name="" id="" value="LOG IN " onClick={handleNavigate}/>
                 </div>
                 <div className="footer-text">
                     <p>OR</p>
