@@ -1,7 +1,12 @@
 import '../../assets/styles/main.css'
 import welcome from '../../assets/welcome.png';
 import logo from '../../assets/LOGO.png'
+import { useNavigate } from 'react-router';
 const Login = () => {
+    const navigate = useNavigate();
+    function handleNavigate () {
+        navigate('/register')
+    }
     return (
         <div className="container">
             <div className="static">
@@ -22,7 +27,7 @@ const Login = () => {
                 </div>
                 <div className="footer-text">
                     <p>OR</p>
-                    <p>Do not have an account?<span>Register</span></p>
+                    <p>Do not have an account?<span onClick={handleNavigate}>Register</span></p>
                 </div>
             </div>
         </div>
