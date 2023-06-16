@@ -1,6 +1,6 @@
 .sidebar--container {
     position: absolute;
-    width: 326px;
+    width: 20%;
     height: 100vh;
     left: 0px;
     top: 0px;
@@ -16,11 +16,12 @@
 .sidebar--container .header img {
     width: 140px;
     height: 35px;
-    margin-right: 80px;
+    margin-right: 70px;
 }
 
 .sidebar--container .links {
     width: 100%;
+    margin-top: 30px;
 }
 
 .sidebar--container .links .link {
