@@ -1,0 +1,37 @@
+.sidebar--container {
+    position: absolute;
+    width: 326px;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    background: #40A8EA;
+    padding: 35px 20px;
+}
+
+.sidebar--container .header {
+    height: 100px;
+    display: flex;
+}
+
+.sidebar--container .header img {
+    width: 140px;
+    height: 35px;
+    margin-right: 80px;
+}
+
+.sidebar--container .links {
+    width: 100%;
+}
+
+.sidebar--container .links .link {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.sidebar--container .links .link p {
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 500;
+}
