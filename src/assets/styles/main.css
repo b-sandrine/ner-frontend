@@ -46,12 +46,18 @@
     top: 50px;
     left: 705px;
     height: 50vh;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
 }
 
 .container .content img {
     margin-bottom: 60px;
+}
+
+.container .content .form {
+    display: grid;
+    place-items: center;
+    width: 100%;
 }
 
 .container .content .form input {
@@ -59,7 +65,7 @@
     width: 566px;
     height: 43px;
     left: 757px;
-    margin: 5px 30px;
+    margin: 8px 0px;
     padding: 10px;
     top: 467px;
     background: rgba(217, 217, 217, 0.76);
@@ -68,16 +74,13 @@
 
 .container .content .form input[type='submit'] {
     width: 256px;
-    height: 38px;
     color: white;
     font-weight: 500;
     background: #40A8EA;
     border-radius: 10px;
-    margin-right: auto;
 }
 
 .container .content .footer-text {
-    width: 566px;
     text-align: center;
     margin: 10px 0;
 }

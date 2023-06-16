@@ -1,10 +1,16 @@
 import './App.css'
 import Login from './pages/Login/Login'
-// import { Route, Routes, Outlet } from 'react-router'
+import Signup from './pages/Signup/Signup'
+import { Route, Routes, Outlet } from 'react-router'
 function App() {
 
   return (
-    <Login />
+    <div>
+      <Routes>
+        <Route path='/login' element={Login} />
+        <Route path='/register' element={Signup} />
+      </Routes>
+    </div>
   )
 }
 
